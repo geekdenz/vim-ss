@@ -13,6 +13,6 @@ function! SSIndent()
         \ || (previous =~ "<%\\s*with.*%>" && previous !~ "<%\\s*end_with\\s*%>" && line !~ "<%\\s*end_with\\s*%>") 
         return indent(previousNum) + &tabstop
     else
-        return HtmlIndent()
+		return HtmlIndentGet(v:lnum)
     endif
 endfunction
